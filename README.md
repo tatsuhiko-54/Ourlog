@@ -1,6 +1,6 @@
 # README
 
-# Chat-space db設計
+# Chatspace db設計
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -28,7 +28,6 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
-
 
 ## messagesテーブル
 |Column|Type|Options|
