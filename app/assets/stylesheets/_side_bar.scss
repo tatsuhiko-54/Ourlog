@@ -41,12 +41,15 @@
     &__group {
       height:65px;
       font-weight: bold;
-      &-name {
+      .linkman {
+        text-decoration: none;
+      }
+      &__name {
         font-size: 15px;
         color: #ffffff;
         margin-bottom: 5px;
       }
-      &-message {
+      &__message {
         font-size: 11px;
         color:#ffffff;
         margin-bottom: 40px;
