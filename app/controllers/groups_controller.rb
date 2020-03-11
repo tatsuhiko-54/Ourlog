@@ -26,8 +26,8 @@ class GroupsController < ApplicationController
   def update
     @group = Group.find(params[:id])
     if @group.update(group_params)
-      redirect_to root_path, notice: 'グループを更新しました'
-    else
+      redirect_to group_messages_path(@group.id), notice: 'グループを更新しました'
+    else                   #prefixはok 引数でgroupidがないとエラーになる。
       render :edit
     end
   end
