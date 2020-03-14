@@ -40,6 +40,7 @@
   &__messages {
     height: calc(100vh - 190px);
     padding: 46px 40px;
+    overflow: scroll;
     &__message {
       margin-bottom: 46px;
       &__upper-info {
