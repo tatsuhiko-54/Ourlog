@@ -59,8 +59,6 @@ $('#new_message').on('submit', function(e){
     var html = buildHTML(data);
     $(".chat-main__messages").append(html);
     $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
-    console.log($('.messages')[0])
-    console.log($('.chat-main__messages')[0])
     $("form")[0].reset();
     $(".chat-main__form__new-message__btn").prop('disabled', false);
     return false;
