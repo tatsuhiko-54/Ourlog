@@ -42,13 +42,14 @@
     &__group {
       height:65px;
       font-weight: bold;
-      .linkman {
+      a {
         text-decoration: none;
       }
       &__name {
         font-size: 15px;
         color: #ffffff;
         margin-bottom: 5px;
+
       }
       &__message {
         font-size: 11px;
