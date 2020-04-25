@@ -3,19 +3,21 @@
     .side-bar__user-name__side-box
       .side-bar__user-name__side-box__name 
         = current_user.name
+      .pop-account
+        アカウントの編集
       %ul.side-bar__user-name__side-box__menu
-        -# %li
-        -#   = link_to new_group_path(current_user) do
-        -#     %i.far.fa-edit
         %li
           = link_to edit_user_path(current_user) do
             %i.fas.fa-cog
+      
   .side-bar__groups
     .side-bar__groups__new
       .side-bar__groups__new__add
         グループ
       = link_to new_group_path(current_user) do
         %i.fas.fa-plus
+    .pop-group
+      グループを作成する
     - current_user.groups.each do |group|
       .side-bar__groups__group
         = link_to group_messages_path(group) do

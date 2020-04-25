@@ -15,13 +15,28 @@
       margin: 0px 20px;
       display: flex;
       justify-content: space-between;
+      position: relative;
         &__name {
           font-size: 16px;
+          height: 20px;
           font-weight: bold;
           color: #ffffff;
         }
+        .pop-account {
+          position: absolute;
+            right: 5px;
+            top: 28px;
+          height: 22px;
+          width: 145px;
+          line-height: 22px;
+          text-align: center;
+          border-radius: 15px;
+          background-color: black;
+          color: #ffffff;
+          opacity: 0;
+        }
         &__menu {
-          width: 60px;
+          width: 25px;
           display: flex;
           justify-content: flex-end;
           li {
@@ -36,6 +51,7 @@
               }
             }
           }
+          
         }
     }
   &__groups {
@@ -47,6 +63,7 @@
       width: 240px;
       display:flex;
       justify-content: space-between;
+      position: relative;
       &__add {
         color: #ffffff;
         font-size: 1.2rem;
@@ -59,6 +76,21 @@
         margin-right: 2px;
         font-size: 1.1rem;
       }
+      .fas.fa-plus:hover {
+        color: #a3a2a2;
+        font-size: 1.1rem;
+      }
+    }
+    .pop-group {
+      height: 24px;
+      width: 150px;
+      line-height: 24px;
+      margin-left: 80px;
+      text-align: center;
+      border-radius: 15px;
+      background-color: black;
+      color: #ffffff;
+      opacity: 0;
     }
     &__group {
       height:65px;

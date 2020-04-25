@@ -10,10 +10,24 @@
     justify-content: space-between;
     box-sizing: border-box;
     border-bottom: solid #ebeaea 1px;
+    &__van {
+      margin: 20px 10px 20px auto;
+      height: 30px;
+      width: 180px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 15px;
+      background-color: black;
+      color: #ffffff;
+      opacity: 0;
+    }
     .far.fa-edit {
       color: black;
       font-size: 1.3rem;
       margin-top: 22px;
+    }
+    .far.fa-edit:hover {
+      color: rgb(80, 79, 79);
     }
     &__left-box {
       padding-top: 13px;
