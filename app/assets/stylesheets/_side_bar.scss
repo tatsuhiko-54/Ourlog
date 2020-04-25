@@ -1,17 +1,17 @@
 .side-bar {
-  background-color: #2f3e51;
-  width: 300px;
+  background-color: rgba(1, 70, 160, 0.925);
+  width: 280px;
   height: 100vh;
   &__user-name {
-    background-color: #253141;
-    height: 100px;
+    background-color: rgba(1, 64, 146, 0.925);
+    height: 70px;
     display: flex;
     align-items: center;
   
     &__side-box {
       height: 20px;
       width: 260px;
-      background-color: #253141;
+      background-color: rgba(1, 64, 146, 0.925);
       margin: 0px 20px;
       display: flex;
       justify-content: space-between;
@@ -27,9 +27,12 @@
           li {
             a {
               color:#ffffff;
-              .far.fa-edit {
-                margin-right: 5px;
-               }
+              .fas.fa-cog {
+                font-size: 1.2rem;
+              }
+              .fas.fa-cog:hover {
+                color: #afadad;
+              }
               }
             }
           }
@@ -39,8 +42,28 @@
     height: calc(100vh - 100px);
     padding: 20px 20px 0 20px;
     overflow: scroll;
+    &__new {
+      height: 26px;
+      width: 240px;
+      display:flex;
+      justify-content: space-between;
+      &__add {
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        line-height: 22px;
+        text-align: center;
+      }
+      .fas.fa-plus {
+        color: #ffffff;
+        margin-right: 2px;
+        font-size: 1.1rem;
+      }
+    }
     &__group {
       height:65px;
+      margin-left: 10px;
+      margin-top: 19px;
       font-weight: bold;
       a {
         text-decoration: none;
@@ -52,9 +75,10 @@
 
       }
       &__message {
-        font-size: 11px;
-        color:#ffffff;
-        margin-bottom: 40px;
+        font-size: 12px;
+        color:#c8c8c8;
+        margin-bottom: 35px;
+        margin-left: 5px;
       }
     }
   }  

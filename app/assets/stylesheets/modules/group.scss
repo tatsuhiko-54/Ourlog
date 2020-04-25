@@ -6,8 +6,7 @@ h1 {
 }
 h2 {
   margin-bottom: 10px;
-  color: #f05050;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 ul {
@@ -32,6 +31,7 @@ li {
   border: 1px solid #ddd;
   border-radius: 5px;
   box-sizing: border-box;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
   &__errors {
     margin: 30px 0;
     padding: 20px 40px;
@@ -56,8 +56,12 @@ li {
     display: inline-block;
     padding: 12px 20px;
     color: #fff;
-    background-color: #38aef0;
+    border-radius: 15px;
+    background-color: #0d9ef1;
     border: 0;
+  }
+  &__action-btn:hover {
+    background-color: #0b18d4;
   }
   &__field {
     margin-top: 30px;

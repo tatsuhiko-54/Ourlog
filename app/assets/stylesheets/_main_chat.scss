@@ -1,39 +1,34 @@
 .chat-main {
   background-color: #fafafa;
   height: 100vh;
-  width: calc(100vw - 300px);
+  width: calc(100vw - 280px);
   &__main-header {
-    background-color: #ffffff;
-    height: 100px;
-    border-bottom: 1px solid #eeeeee;
+    background-color: #fafafa;
+    height: 70px;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+    border-bottom: solid #ebeaea 1px;
+    .far.fa-edit {
+      color: black;
+      font-size: 1.3rem;
+      margin-top: 22px;
+    }
     &__left-box {
-      padding-top: 35px;
+      padding-top: 13px;
       &__current-group {
-      font-size: 20px;
+      font-size: 22px;
+      font-weight: bold;
       color:#333333;
-      margin-bottom: 15px;
       }
       &__member-list {
         font-size: 12px;
-        color: #999999;
+        font-weight: bold;
+        color: #7c7c7c;
       }
     } 
-    &__edit-btn {
-      border: solid 1px #38aef0;
-      font-size: 16px;
-      color: #38aef0;
-      height: 40px;
-      padding: 0 20px;
-      line-height: 40px;
-      text-align: center;
-      position: absolute;
-       top: 30px;
-       right: 40px;
-      }
+
 
   }
 
@@ -48,7 +43,7 @@
         padding-bottom: 12px;
         &__talker {
           font-weight: bold;
-          font-size: 16px;
+          font-size: 15px;
           color: #333333;
           float:left;
         }
@@ -59,7 +54,7 @@
         }
       }
       &__textman {
-        font-size: 14px;
+        font-size: 16px;
         color: #434a54;
       }
     }
@@ -67,17 +62,34 @@
 
 
   &__form {
-    background-color: #d2d2d2;
+    background-color: #d2d2d291;
     height: 90px;
+    margin: 0 20px;
+    border: solid 1px;
+    border-radius: 15px;
     padding: 20px 40px;
     &__new-message {
       &__input-box {
         display: flex;
         width: 100%;
         position: relative;
+        .fa-paper-plane {
+          cursor: pointer;
+          font-size: 1.4rem;
+          position: absolute;
+            right: 20px;
+            top: 13px;
+        }
+        .fa-paper-plane:hover {
+          cursor: pointer;
+          color: rgb(35, 193, 246);
+          transform: scale(1.2, 1.2);
+          transition: all 0.1s ease;
+        }
         &__text {
           height: 50px;
           width: 100%;
+          border-radius: 10px;
           background-color: #ffffff;
           color: #434a54;
           border-style: none;
@@ -87,23 +99,19 @@
           cursor: pointer;
           font-size: 1.3rem;
           position: absolute;
-           top: 10px;
-           right: 130px;
+            top: 10px;
+            right: 90px;
+          .icon:hover {
+            transform: scale(1.2, 1.2);
+            transition: all 0.1s ease;
+          }
           &__file {
             display: none;
           }
         }
       }
       &__btn {
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: #38aef0;
-        color:white;
-        line-height: 50px;
-        text-align: center;
-        cursor: pointer;
+        display: none;
       }
     }
   }

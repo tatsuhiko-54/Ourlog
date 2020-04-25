@@ -1,28 +1,28 @@
 $(function(){ 
   function buildHTML(message){
-   if ( message.image ) {
-     var html =
-     `<div class="messages" data-message-id="${message.id}">
-     <div class="chat-main__messages__message">
-       <div class="chat-main__messags__message__upper-info">
-         <div class="chat-main__messages__message__upper-info__talker">
-         ${message.user_name}
-         </div>
-           <div class="chat-main__messages__message__upper-info__date">
-           ${message.created_at}
-           </div>
-         </div>
+    if ( message.image ) {
+      var html =
+      `<div class="messages" data-message-id="${message.id}">
+      <div class="chat-main__messages__message">
+        <div class="chat-main__messags__message__upper-info">
+          <div class="chat-main__messages__message__upper-info__talker">
+          ${message.user_name}
+          </div>
+            <div class="chat-main__messages__message__upper-info__date">
+            ${message.created_at}
+            </div>
+          </div>
         <div class="chat-main__messages__message__textman">
-         <p class="text__content">
-         ${message.content}
-         </p>
-         <img src="${message.image}" >
-       </div>
-     </div>
-   </div>`
-     return html;
-   } else {
-     var html =
+          <p class="text__content">
+          ${message.content}
+          </p>
+          <img src="${message.image}" >
+        </div>
+      </div>
+    </div>`
+      return html;
+    } else {
+      var html =
       `<div class="messages" data-message-id="${message.id}">
         <div class="chat-main__messages__message">
           <div class="chat-main__messages__message__upper-info">
@@ -33,16 +33,16 @@ $(function(){
               ${message.created_at}
               </div>
             </div>
-           <div class="chat-main__messages__message__textman">
+          <div class="chat-main__messages__message__textman">
             <p class="text__content">
             ${message.content}
             </p>
           </div>
         </div>
       </div>`
-     return html;
-   };
- }
+      return html;
+    };
+  }
   $('#new_message').on('submit', function(e){
   e.preventDefault();
   var formData = new FormData(this);
@@ -65,10 +65,10 @@ $(function(){
   })
   .fail(function() {
     alert("メッセージ送信に失敗しました");
-   });
- })
+  });
+})
 
- var reloadMessages = function() {
+  var reloadMessages = function() {
   var last_message_id = $('.messages:last').data("message-id");
   $.ajax({
     url: "api/messages",
@@ -84,13 +84,17 @@ $(function(){
     });
     $('.chat-main__messages').append(insertHTML);
     $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
-   }
+  }
   })
   .fail(function() {
     alert('error');
   });
- };
- if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+  };
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
   setInterval(reloadMessages, 7000);
- }
+  }
+
+  $(".fa-paper-plane").on('click' , function() {
+    $(".chat-main__form__new-message__btn").click()
+  })
 });

@@ -4,23 +4,21 @@
       %p.chat-main__main-header__left-box__current-group 
         = @group.name
       %p.chat-main__main-header__left-box__member-list 
-        Member : 
-        - @group.users.each do |user|
-          = user.name
+        = "メンバー : #{@group.users.length}人"
     %a
       = link_to edit_group_path(@group.id) do
-        .chat-main__main-header__edit-btn Edit
+        %i.far.fa-edit
 
   .chat-main__messages
     = render @messages
-  
-  
+
   .chat-main__form
     .chat-main__form__new-message
       = form_for [@group, @message] do |f|
         .chat-main__form__new-message__input-box
-          = f.text_field :content, class: 'chat-main__form__new-message__input-box__text', placeholder: 'type a message'
+          %i.fas.fa-paper-plane
+          = f.text_field :content, class: 'chat-main__form__new-message__input-box__text', placeholder: 'メッセージを入力'
           = f.label :image, class: 'chat-main__form__new-message__input-box__image' do
             = icon('fas', 'image', class: 'icon')
             = f.file_field :image, class: 'chat-main__form__new-message__input-box__image__file'
-          = f.submit 'Send', class: 'chat-main__form__new-message__btn'
+          = f.submit "", class: 'chat-main__form__new-message__btn'
