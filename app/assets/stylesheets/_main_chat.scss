@@ -1,5 +1,5 @@
 .chat-main {
-  background-color: #fafafa;
+  background-color:rgba(212, 236, 245, 0.808);
   height: 100vh;
   width: calc(100vw - 280px);
   &__main-header {
@@ -63,6 +63,7 @@
       background: #FFF;
       border: solid 3px #555;
       box-sizing: border-box;
+      border-radius: 10px;
       &__upper-info {
         display: flex;
         padding-bottom: 12px;
