@@ -27,5 +27,4 @@ $(function(){
     $(".pop-group").css('transition', '0.1s')
   });
 
-
 });
