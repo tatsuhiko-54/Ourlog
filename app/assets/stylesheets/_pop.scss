@@ -1,0 +1,13 @@
+.pop-man {
+  margin: 20px 40px;
+  &__text {
+    height: 40px;
+    width: 300px;
+    border-radius: 20px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(248, 127, 13);
+    color: #ffffff;
+  }
+
+}
